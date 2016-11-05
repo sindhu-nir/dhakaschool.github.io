@@ -1,0 +1,130 @@
+<?php 
+		session_start();
+		echo "Welcome ".$_SESSION['CurrentUser'];
+?>
+<html>
+<title>Student marks </title>
+
+<script>
+function validateForm() {
+    var x = document.forms["f1"]["s_id"].value;
+    if (x == null || x == "") {
+        alert("Student Id must be filled out");
+        return false;
+    }
+
+
+var y = document.forms["f1"]["exam"].value;
+    if (y == null || y == "") {
+        alert("exam must be filled out");
+        return false;
+    }
+
+
+var z= document.forms["f1"]["mark1"].value;
+    if (z == null || z == "") {
+        alert("mark1 must be filled out");
+		return false;
+        
+    }
+var w = document.forms["f1"]["mark2"].value;
+    if (w == null || w == "") {
+        alert("mark2 must be filled out");
+        
+    }
+	var p = document.forms["f1"]["mark3"].value;
+    if (p == null || p== "") {
+        alert("mark3 must be filled out");
+		return false;
+        
+    }
+	
+	var q = document.forms["f1"]["mark4"].value;
+    if (q == null || q== "") {
+        alert("mark4 must be filled out");
+		return false;
+        
+    }
+	
+	var r = document.forms["f1"]["mark5"].value;
+    if (r == null || r== "") {
+        alert("mark5 must be filled out");
+		return false;
+        
+    }
+}
+
+
+</script>
+<body>
+<form name="f1" method="post"  action="updatemark.php" onsubmit="return validateForm() ">
+<table cellpadding="2" width="60%" height:"160%" bgcolor="99FFFF" align="center"
+cellspacing="2">
+
+<tr>
+<td colspan=2>
+<center><font size=4><b>Student Marks Form</b></font></center>
+</td>
+</tr>
+
+
+<tr>
+<td> Student Id :</td>
+<td><input type="text" name="s_id" size="30"></td>
+</tr>
+
+
+<tr>
+<td>Exam :</td>
+<td><select name="exam">
+<option value='' selected>select..</option>
+<option value='1st Mid Term'>1st Mid Term</option>
+<option value='2nd Mid Term'>2nd Mid Term</option>
+<option value='Final'>Final </option>
+
+</select></td>
+</tr>
+
+
+<tr>
+<td>Mark1</td>
+<td><input type="text" name="mark1" size="30"></td>
+</tr>
+
+
+<tr>
+<td>Mark2 </td>
+<td><input type="text" name="mark2" size="30"></td>
+</tr>
+
+<tr>
+<td>Mark </td>
+<td><input type="text" name="mark3" size="30"></td>
+</tr>
+
+<tr>
+<td>Mark4 </td>
+<td><input type="text" name="mark4" size="30"></td>
+</tr>
+<tr>
+<td>Mark5 </td>
+<td><input type="text" name="mark5" size="30"></td>
+</tr>
+
+<tr>
+<td></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+<p align="center"> <a  href="admin1.php" >Back To Admin </a> </p>
+</body>
+</html>
+
+
+
+
+
+
+
+ 

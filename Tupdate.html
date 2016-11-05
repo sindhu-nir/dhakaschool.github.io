@@ -1,0 +1,99 @@
+<?php 
+		session_start();
+		echo "Welcome ".$_SESSION['CurrentUser'];
+?>
+<html>
+<script>
+function validateForm() {
+    var x = document.forms["f1"]["initial"].value;
+    if (x == null || x == "") {
+        alert("Teacher initial must be filled out");
+        return false;
+    }
+
+
+var y = document.forms["f1"]["day"].value;
+    if (y == null || y == "") {
+        alert("Day must be filled out");
+        return false;
+    }
+
+
+var z= document.forms["f1"]["time1"].value;
+    if (z == null || z == "") {
+        alert("Time 8:00-10:00 must be filled out");
+		return false;
+        
+    }
+var w = document.forms["f1"]["time2"].value;
+    if (w == null || w == "") {
+        alert("10:00-12:00 must be filled out");
+        
+    }
+	var p = document.forms["f1"]["time3"].value;
+    if (p == null || p== "") {
+        alert("12:00-2:00 must be filled out");
+		return false;
+        
+    }
+}
+
+
+</script>
+<body>
+<form name="f1" method="post"  action="Tupdate.php" onsubmit="return validateForm() ">
+<table cellpadding="2" width="60%" height:"160%" bgcolor="99FFFF" align="center"
+cellspacing="2">
+
+<tr>
+<td colspan=2>
+<center><font size=4><b>Teacher Information Update Form</b></font></center>
+</td>
+</tr>
+
+
+<tr>
+<td> Teacher Initial :</td>
+<td><input type="text" name="initial" size="30"></td>
+</tr>
+
+
+<tr>
+<td> Day :</td>
+<td><input type="text" name="day" size="30"></td>
+</tr>
+
+<tr>
+<td>8:00 - 10:00 :</td>
+<td><input type="text" name="time1" size="30"></td>
+</tr>
+
+
+<tr>
+<td>10:00-12:00 </td>
+<td><input type="text" name="time2" size="30"></td>
+</tr>
+<tr>
+<td>12:00-2:00 </td>
+<td><input type="text" name="time3" size="30"></td>
+</tr>
+
+
+
+<tr>
+<td></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+<p align="center"> <a  href="admin1.php" >Back To Admin </a> </p>
+</body>
+</html>
+
+
+
+
+
+
+
+ 

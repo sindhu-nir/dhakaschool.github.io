@@ -1,0 +1,73 @@
+<?php 
+		session_start();
+		echo "Welcome ".$_SESSION['CurrentUser'];
+?>
+<html>
+<title>Student marks </title>
+
+<script>
+function validateForm() {
+    var x = document.forms["f1"]["s_id"].value;
+    if (x == null || x == "") {
+        alert("Student Id must be filled out");
+        return false;
+    }
+
+
+var y = document.forms["f1"]["exam"].value;
+    if (y == null || y == "") {
+        alert("exam must be filled out");
+        return false;
+    }
+
+
+}
+
+
+</script>
+<body>
+<form name="f1" method="post"  action="deletemark.php" onsubmit="return validateForm() ">
+<table cellpadding="2" width="60%" height:"160%"  align="center"
+cellspacing="2">
+
+<tr>
+<td colspan=2>
+<center><font size=4><b> Marks Delete Form</b></font></center>
+</td>
+</tr>
+
+
+<tr>
+<td> Student Id :</td>
+<td><input type="text" name="s_id" size="30"></td>
+</tr>
+
+
+<tr>
+<td>Exam :</td>
+<td><select name="exam">
+<option value='' selected>select..</option>
+<option value='1st Mid Term'>1st Mid Term</option>
+<option value='2nd Mid Term'>2nd Mid Term</option>
+<option value='Final'>Final </option>
+
+</select></td>
+</tr>
+
+<tr>
+<td></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+<p align="center"> <a  href="admin1.php" >Back To Admin </a> </p>
+</body>
+</html>
+
+
+
+
+
+
+
+ 

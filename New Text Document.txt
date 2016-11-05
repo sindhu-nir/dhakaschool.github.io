@@ -1,0 +1,29 @@
+<?php
+$con=mysqli_connect("localhost","root","","");
+$a=$_POST["name"];
+$e=$_POST["roll"];
+$f=$_POST["Student_class"];
+
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+else{
+	
+  echo "Connected successfully <br>";
+}
+
+
+mysqli_select_db($con,"school_management");
+
+
+mysqli_query($con,"Delete From student VALUES ('$a', '$b', '$c', '$d','$e', '$f')");
+					
+
+?>
+<html>
+<body>
+<a href="regss.html">Insert Another New Student</a>
+<a href="studentUI.html">Back to Home page</a>
+</body>
+</html>

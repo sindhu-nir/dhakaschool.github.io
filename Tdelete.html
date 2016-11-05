@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>
+Admin Panel
+</title>
+</head>
+	<script>
+	function validateForm() {
+    var x = document.forms["Tdelete"]["fa1"].value;
+    if (x == null || x == "") {
+        alert("Teacher Initial must be filled out");
+        return false;
+    }
+	
+	
+
+
+}
+
+</script>
+
+<body>
+<form name="Tdelete" method="POST" action="Tdelt.php" onsubmit="return validateForm()">
+<table>
+<tr><td>
+Initial Name: </td> <td><input type="text" name="fa1"></td></tr>
+<tr><td> Day : </td> <td><input type="text" name="fa2"></td></tr>
+<tr><td><button>Delete</button></td></tr>
+</table>
+</form>
+
+<p align="center"><a  href="admin1.php" >Back To Admin </a> </p>
+</body>
+</html>
